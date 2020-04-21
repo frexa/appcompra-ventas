@@ -5,26 +5,25 @@ from datetime import datetime
 class IngredienteForm(forms.ModelForm):
 	class Meta:
 		model = Ingrediente
-		fields= ['receta','compra','nombre','medida']
+		fields= ['receta','compra','nombre','precio_unit']
 		labels={
 		'receta':'Receta:',
-		'compra':'Compra',
+		'compra':'Compra:',
 		'nombre':'Nombre:',
-		'medida':'Medida:',
+		'precio_unit':'Precio:',
 		}
 		widgets={
 		'receta':forms.TextInput(attrs={
 	 							'class':'form-control',
 	 							'placeholder':'Galletas'}),
-		'compra':forms.SelectDateWidget(attrs={
+		'compra':forms.Select(attrs={
 									'class':'form-control',
 									}),
 		'nombre': forms.TextInput(attrs={
 									'class':'form-control',
 									'placeholder':'200000,00'
 									}),
-		'medida':forms.SelectDateWidget(attrs={
+		'precio_unit':forms.TextInput(attrs={
 								 	'class':'form-control',
-								 	'placeholder':'12/04/2020'
 								 	})
 		}

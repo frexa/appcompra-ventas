@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from apps.inventarios.models import Receta
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from apps.recetarios.forms.formReceta import RecetaForm
+from apps.recetarios.forms import RecetaForm
+from apps.recetarios.models import Receta
 
 class Registrar(CreateView):
 	"""docstring for RegistrarRecetas"""

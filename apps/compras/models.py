@@ -8,10 +8,8 @@ from django.utils import timezone
 class Compra(models.Model):
 	"""docstring for Compras"""
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Código unico para cada compra")
-	cantidad = models.IntegerField(default=0 ,blank=True,null=True)
-	peso = models.FloatField(default=0.00, blank=True,null=True)
-	precio_unt = models.FloatField(default  = 0.00)
-	total = models.DoubleField(default  = 0.00)
+	cantidad = models.IntegerField()
+	total = models.FloatField(default  = 0.00)
 	fecha_compra = models.DateField(default = timezone.now, blank=True, null=True)
 
 	def __str__(self):

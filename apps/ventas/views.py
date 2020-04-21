@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from apps.inventarios.models import Venta
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from apps.ventas.forms.formVentas import VentasForm
+from apps.ventas.forms import VentasForm
+from apps.ventas.models import Venta
+
 # Create your views here.
 
 class Registrar(CreateView):
