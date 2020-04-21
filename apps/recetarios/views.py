@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from apps.inventarios.forms.formReceta import RecetaForm
+from apps.recetarios.forms.formReceta import RecetaForm
 
 class Registrar(CreateView):
 	"""docstring for RegistrarRecetas"""

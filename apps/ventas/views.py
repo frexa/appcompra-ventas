@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from apps.inventarios.forms.formVentas import VentasForm
+from apps.ventas.forms.formVentas import VentasForm
 # Create your views here.
 
 class Registrar(CreateView):

@@ -1,5 +1,5 @@
 from django import forms
-from apps.inventarios.models import Venta
+from apps.ventas.models import Venta
 from datetime import timezone
 
 class VentasForm(forms.ModelForm):
