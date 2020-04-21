@@ -1,0 +1,22 @@
+{%extends "base/base.html"%}
+{%block content%}
+	<table>
+		<header>Detalles</header>
+		<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Precio</th>
+			<th>Cantidad</th>
+			<th>Fecha de compra</th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ingrediente.nombre}}</td>
+				<td>{{ingrediente.precio}}</td>
+				<td>{{ingrediente.cantidad}}</td>
+				<td>{{ingrediente.fecha_compra}}</td>
+			</tr>
+		</tbody>
+	</table>
+{%endblock%}

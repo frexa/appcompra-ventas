@@ -1,0 +1,16 @@
+{%extends "base/base.html"%}
+{%block content%}
+	<h1>Lista de ingredientes</h1>
+		{%if ingrediente_list %}
+			<ul>
+				{%for ingrediente in ingrediente_list%}
+					<li>
+						<a href="{{ingrediente.get_absolute_url}}">{{ingrediente.nombre}}
+						</a>
+					</li>
+				{%endfor%}
+			</ul>
+		{%else%}
+			<p>No se encuentran ingredientes</p>
+		{%endif%}
+{%endblock%}
