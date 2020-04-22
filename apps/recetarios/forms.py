@@ -4,11 +4,11 @@ from apps.recetarios.models import Receta
 class RecetaForm(forms.ModelForm):
 	class Meta:
 		model = Receta
-		fields=['nombre', 'preparacion']
+		fields=['nombre','descripcion']
 
 		labels={
 		'nombre':'Nombre:',
-		'preparacion':'Preparación:'
+		'descripcion':'Preparación:'
 		}
 
 		widgets={
@@ -16,7 +16,7 @@ class RecetaForm(forms.ModelForm):
 			'class':'form-control',
 			'placeholder':'Galletas confitadas'
 			}),
-		'preparacion':forms.Textarea(attrs={
+		'descripcion':forms.Textarea(attrs={
 			'class':'form-control',
 			'placeholder':'Describa metodo de preparación (Opcional)',
 			'required':'off'
