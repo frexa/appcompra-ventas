@@ -11,7 +11,7 @@ class Compra(models.Model):
 	fecha = models.DateField(default = timezone.now, blank=True, null=True)
 
 	def __str__(self):
-		return '%s'%(self.fecha_compra)
+		return '%s'%(self.fecha)
 
 	def get_absolute_url(self):
 		return reverse('compra-detail', args=[srt(self.id)])
