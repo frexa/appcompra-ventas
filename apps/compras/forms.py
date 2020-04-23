@@ -11,7 +11,7 @@ class CompraForm(forms.ModelForm):
 
 		widgets={
 		'id':forms.TextInput(attrs={'class':'form-control'}),
-		'fecha':forms.SelectDateInput(attrs={'class':'form-control'})
+		'fecha':forms.SelectDateWidget(attrs={'class':'form-control'})
 		}
 
 class LineaDeCompraForm(forms.ModelForm):

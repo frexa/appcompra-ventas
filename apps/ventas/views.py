@@ -16,8 +16,8 @@ class Registrar(CreateView):
 	form_class = VentasForm
 	success_url = 'ventas'
 
-	def get_context_data(self, **kawargs):
-		context = super(Registrar,self).get_context_data(**kawargs)
+	def get_context_data(self, **kwargs):
+		context = super(Registrar,self).get_context_data(**kwargs)
 		if 'form' not in context:
 			context['form'] = self.form_class(self.request.GET)
 		return context
