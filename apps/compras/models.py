@@ -35,3 +35,6 @@ class LineaDeCompra(models.Model):
 	ingrediente = models.ForeignKey(Ingrediente, on_delete = models.CASCADE)
 	cantidad = models.IntegerField(default=0)
 	total = models.FloatField(default=0.0)
+
+	def get_absolute_url(self):
+		return reverse('detail-compra', args=[str(self.id)])
