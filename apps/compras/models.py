@@ -5,10 +5,9 @@ from datetime import date
 from django.utils import timezone
 # Create your models here.
 
-class Compra(models.Model):
+class FechaDeCompra(models.Model):
 	"""docstring for Compras"""
-	id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Código unico para cada compra")
-	fecha = models.DateField(default = timezone.now, blank=True, null=True)
+	fecha = models.DateField(default = timezone.now)
 
 	def __str__(self):
 		return '%s'%(self.fecha)
@@ -31,7 +30,8 @@ class Ingrediente(models.Model):
 
 class LineaDeCompra(models.Model):
 	"""docstring for LineaDeCompra"""
-	compra = models.ForeignKey(Compra, on_delete = models.CASCADE)
+	id = models.UUIDField(primary_key=True, default = uuid.uuid4)
+	fecha = models.ForeignKey(FechaDeCompra, on_delete = models.CASCADE)
 	ingrediente = models.ForeignKey(Ingrediente, on_delete = models.CASCADE)
 	cantidad = models.IntegerField(default=0)
 	total = models.FloatField(default=0.0)

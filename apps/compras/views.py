@@ -14,15 +14,15 @@ def index(request):
 	request.session['numero_visitas'] = numero_visitas+1
 	return render(request,'index.html', {'ingrediente':ingrediente,
 										'numero_visitas':numero_visitas})
-class RegistrarCompra(CreateView):
+class RegistrarFecha(CreateView):
 	"""docstring for RegistrarCompra"""
-	model = Compra
+	model = FechaDeCompra
 	template_name = 'CrearCompra.html'
-	form_class = CompraForm
+	form_class = FechaDeCompraForm
 	success_url = 'ingrediente'
 
 	def get_context_data(self, **kwargs):
-		context = super(RegistrarCompra,self).get_context_data(**kwargs)
+		context = super(RegistrarFecha,self).get_context_data(**kwargs)
 		if 'form' not in context:
 			context['form'] = self.model_form(self.request.GET)
 		return context
@@ -37,15 +37,15 @@ class RegistrarCompra(CreateView):
 		else:
 			return render_to_response(self.get_context_data(form=form))
 
-class ActualizarCompra(UpdateView):
+class ActualizarFecha(UpdateView):
 	"""docstring for ActualizarCompra"""
-	model = Compra
+	model = FechaDeCompra
 	template_name = 'CrearCompra.html'
-	form_class = CompraForm
+	form_class = FechaDeCompraForm
 	success_url = 'ingrediente'
 
 	def get_context_data(self, **kwargs):
-		context = super(RegistrarCompra,self).get_context_data(**kwargs)
+		context = super(ActualizarFecha,self).get_context_data(**kwargs)
 		if 'form' not in context:
 			context['form'] = self.model_form(self.request.GET)
 		return context
@@ -91,7 +91,7 @@ class ActualizarLineaCompra(UpdateView):
 	success_url = 'compra'
 
 	def get_context_data(self, **kwargs):
-		context = super(RegistrarLineaCompra,self).get_context_data(**kwargs)
+		context = super(ActualiarLineaCompra,self).get_context_data(**kwargs)
 		if 'form' not in context:
 			context['form'] = self.form_class(self.request.GET)
 		return context
@@ -137,7 +137,7 @@ class ActualizarIngrediente(UpdateView):
 	success_url = 'linea'
 
 	def get_context_data(self, **kwargs):
-		context = super(RegistrarIngrediente,self).get_context_data(**kwargs)
+		context = super(ActualizarIngrediente,self).get_context_data(**kwargs)
 		if 'form' not in context:
 			context['form'] = self.form_class(self.request.GET)
 		return context
@@ -153,17 +153,18 @@ class ActualizarIngrediente(UpdateView):
 			return render_to_response(self.get_context_data(form=form))
 
 
-class EliminarCompra(DeleteView):
+class EliminarFecha(DeleteView):
 	"""docstring for Eliminar"""
-	model = Compra
+	model = FechaDeCompra
 	template_name = 'EliminarCompra'
-
+	reverse_lazy('/')
 class EliminarLineaCompra(DeleteView):
 	"""docstring for Eliminar"""
 	model = LineaDeCompra
 	template_name = 'EliminarLinea'
-
+	reverse_lazy('/')
 class EliminarIngrediente(DeleteView):
 	"""docstring for Eliminar"""
 	model = Ingrediente
 	template_name = 'EliminarIngrediente'
+	reverse_lazy('/')

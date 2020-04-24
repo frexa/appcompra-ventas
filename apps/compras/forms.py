@@ -1,16 +1,15 @@
 from django import forms
-from apps.compras.models import Compra, LineaDeCompra, Ingrediente
+from apps.compras.models import*
 
-class CompraForm(forms.ModelForm):
+class FechaDeCompraForm(forms.ModelForm):
 	class Meta:
-		model = Compra
+		model = FechaDeCompra
 		
-		fields = ['id', 'fecha']
+		fields = ['fecha']
 
-		labels={'id':'Código de compra:','fehca':'Fecha de compra:'}
+		labels={'fehca':'Fecha de compra:'}
 
 		widgets={
-		'id':forms.TextInput(attrs={'class':'form-control'}),
 		'fecha':forms.SelectDateWidget(attrs={'class':'form-control'})
 		}
 
@@ -18,18 +17,20 @@ class LineaDeCompraForm(forms.ModelForm):
 	class Meta:
 		model = LineaDeCompra
 
-		fields= ['compra', 'ingrediente', 'cantidad','total']
+		fields= ['id','fecha', 'ingrediente', 'cantidad','total']
 		
-		lebels={'compra':'Fecha de compra:','ingrediente':'Rubro:',
+		lebels={'fecha':'Fecha de compra:','ingrediente':'Rubro:',
 		'cantidad':'Cantidad:',
-		'total':'Total a pagar:'
+		'total':'Total a pagar:',
+		'id':'Código'
 		}
 		
 		widgets={
 		'compra':forms.Select(attrs={'class':'form-control'}),
 		'ingrediente':forms.Select(attrs={'class':'form-control'}),
-		'cantidad':forms.TextInput(attrs={'class':'form-control', 'type':'number'}),
-		'total':forms.TextInput(attrs={'class':'form-control'})
+		'cantidad':forms.TextInput(attrs={'class':'form-control'}),
+		'total':forms.TextInput(attrs={'class':'form-control'}),
+		'id':forms.TextInput(attrs={'class':'form-control'})
 		}
 
 class IngredienteForm(forms.ModelForm):

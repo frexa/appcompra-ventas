@@ -1,8 +1,8 @@
 from django.contrib import admin
-from apps.compras.models import Compra, LineaDeCompra, Ingrediente
+from apps.compras.models import*
 
 # Register your models here.
 
-admin.site.register(Compra)
+admin.site.register(FechaDeCompra)
 admin.site.register(LineaDeCompra)
 admin.site.register(Ingrediente)
