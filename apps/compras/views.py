@@ -8,7 +8,12 @@ from apps.compras.forms import*
 from apps.compras.models import*
 
 # Create your views here.
-
+def index(request):
+	ingrediente = Ingrediente.objects.all().count()
+	numero_visitas = request.session.get('numero_visitas',0)
+	request.session['numero_visitas'] = numero_visitas+1
+	return render(request,'index.html', {'ingrediente':ingrediente,
+										'numero_visitas':numero_visitas})
 class RegistrarCompra(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = Compra
@@ -146,3 +151,19 @@ class ActualizarIngrediente(UpdateView):
 			return HttpResponseRedirect(self.get_success_url())
 		else:
 			return render_to_response(self.get_context_data(form=form))
+
+
+class EliminarCompra(DeleteView):
+	"""docstring for Eliminar"""
+	model = Compra
+	template_name = 'EliminarCompra'
+
+class EliminarLineaCompra(DeleteView):
+	"""docstring for Eliminar"""
+	model = LineaDeCompra
+	template_name = 'EliminarLinea'
+
+class EliminarIngrediente(DeleteView):
+	"""docstring for Eliminar"""
+	model = Ingrediente
+	template_name = 'EliminarIngrediente'

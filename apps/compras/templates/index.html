@@ -1,0 +1,12 @@
+{% extends "base/base.html" %}
+
+{%block content%}
+	<p>Bienvenido a <em>creacionesfrexa</em>, es un sitio web desarrollado con el framework Django que te permitira estimar costos de productos elaborados, analisis de datos para la mejora de la produccion y saber cuanto inviertes.</p>
+
+	<h2>Contenido:</h2>
+
+		<p>Cantidad de Ingredientes disponibles</p>
+			<ul>
+				<li><strong>Ingredientes:</strong>{{ ingrediente }}</li>
+		<p>Numero de visitas:{{ numero_visitas }}{% if numero_visitas == 1 %} time{% else %} times{% endif %}.</p>
+{%endblock%}
