@@ -14,7 +14,7 @@ class RegistrarCompra(CreateView):
 	model = Compra
 	template_name = 'CrearCompra.html'
 	form_class = CompraForm
-	success_url = 'registar'
+	success_url = 'ingrediente'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarCompra,self).get_context_data(**kwargs)
@@ -35,9 +35,9 @@ class RegistrarCompra(CreateView):
 class RegistrarLineaCompra(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = LineaDeCompra
-	template_name = 'resgistrarlineacompras.html'
+	template_name = 'CrearLineaDeCompra.html'
 	form_class = LineaDeCompraForm
-	success_url = 'registar'
+	success_url = 'compra'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarLineaCompra,self).get_context_data(**kwargs)
@@ -58,9 +58,9 @@ class RegistrarLineaCompra(CreateView):
 class RegistrarIngrediente(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = Ingrediente
-	template_name = 'resgistraringredientes.html'
+	template_name = 'CrearIngrediente.html'
 	form_class = IngredienteForm
-	success_url = 'registar'
+	success_url = 'linea'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarIngrediente,self).get_context_data(**kwargs)
