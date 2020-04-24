@@ -12,8 +12,8 @@ from apps.compras.models import*
 class RegistrarCompra(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = Compra
-	template_name = 'resgistrarcompras.html'
-	model_form = CompraForm
+	template_name = 'CrearCompra.html'
+	form_class = CompraForm
 	success_url = 'registar'
 
 	def get_context_data(self, **kwargs):
@@ -24,7 +24,7 @@ class RegistrarCompra(CreateView):
 
 	def post(self, request, *args, **kwargs):
 		self.object = self.get_object
-		form = self.model_form(self.request.POST)
+		form = self.form_class(self.request.POST)
 		if form.is_valid():
 			compra = form.save(commit=False)
 			compra.save()
@@ -36,18 +36,18 @@ class RegistrarLineaCompra(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = LineaDeCompra
 	template_name = 'resgistrarlineacompras.html'
-	model_form = LineaDeCompraForm
+	form_class = LineaDeCompraForm
 	success_url = 'registar'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarLineaCompra,self).get_context_data(**kwargs)
 		if 'form' not in context:
-			context['form'] = self.model_form(self.request.GET)
+			context['form'] = self.form_class(self.request.GET)
 		return context
 
 	def post(self, request, *args, **kwargs):
 		self.object = self.get_object
-		form = self.model_form(self.request.POST)
+		form = self.form_class(self.request.POST)
 		if form.is_valid():
 			lineacompra = form.save(commit=False)
 			lineacompra.save()
@@ -59,18 +59,18 @@ class RegistrarIngrediente(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = Ingrediente
 	template_name = 'resgistraringredientes.html'
-	model_form = IngredienteForm
+	form_class = IngredienteForm
 	success_url = 'registar'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarIngrediente,self).get_context_data(**kwargs)
 		if 'form' not in context:
-			context['form'] = self.model_form(self.request.GET)
+			context['form'] = self.form_class(self.request.GET)
 		return context
 
 	def post(self, request, *args, **kwargs):
 		self.object = self.get_object
-		form = self.model_form(self.request.POST)
+		form = self.form_class(self.request.POST)
 		if form.is_valid():
 			ingrediente = form.save(commit=False)
 			ingrediente.save()

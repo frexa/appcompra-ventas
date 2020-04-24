@@ -1,0 +1,22 @@
+{%extends "base/base.html"%}
+{%block content%}
+<div class='jumbotron'>
+	<center>
+		<div class="text-left" style="max-width:500px">
+			<form method="post">
+				{% csrf_token %}
+				{% for field in form %}
+					<div class='form-group'>
+						<label for="{{ field.name }}">{{ field.label }}</label>
+						{{ field }}
+					</div>
+				{% endfor %}
+				<br>
+			<center>
+			<button type="submit" class="btn btn-success btn-lg">Registrar compra</button>
+		</center>
+		</form>
+	</div>
+	</center>
+</div>
+{%endblock%}

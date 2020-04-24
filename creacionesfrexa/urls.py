@@ -21,4 +21,5 @@ from apps.compras import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('creacionesfrexa/',include('apps.compras.urls')),
 ]
