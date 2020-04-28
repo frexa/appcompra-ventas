@@ -13,7 +13,7 @@ class FechaDeCompra(models.Model):
 		return '%s'%(self.fecha)
 
 	def get_absolute_url(self):
-		return reverse('compra-detail', args=[srt(self.id)])
+		return reverse('fecha-detail', args=[srt(self.id)])
 
 class Ingrediente(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Código único para cada ingrediente")
@@ -36,5 +36,8 @@ class LineaDeCompra(models.Model):
 	cantidad = models.IntegerField(default=0)
 	total = models.FloatField(default=0.0)
 
+	def __str__(self):
+		return '%s'%(self.fecha.fecha)
+
 	def get_absolute_url(self):
-		return reverse('detail-compra', args=[str(self.id)])
+		return reverse('compra-detail', args=[str(self.id)])

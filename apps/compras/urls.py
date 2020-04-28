@@ -4,15 +4,17 @@ from apps.compras.views import*
 urlpatterns=[
 	path('',index, name = 'index'),
 	path('registrar/', include([
-		path('fecha',RegistrarFecha.as_view(), name='registrar-compra'),
+		path('fecha',RegistrarFecha.as_view(), name='registrar-fecha'),
 		path('ingrediente',RegistrarIngrediente.as_view(),name='registrar-ingrediente'),
-		path('linea',RegistrarLineaCompra.as_view(),name='registrar-linea')])),
+		path('compra',RegistrarLineaCompra.as_view(),name='registrar-compra')])),
 	path('actualizar/',include([
-		path('<int:pk>/fecha',ActualizarFecha.as_view(),name = 'actualizar-compra'),
-		path('<int:pk>/linea',ActualizarLineaCompra.as_view(),name = 'actualizar-linea'),
+		path('<int:pk>/fecha',ActualizarFecha.as_view(),name = 'actualizar-fecha'),
+		path('<int:pk>/compra',ActualizarLineaCompra.as_view(),name = 'actualizar-compra'),
 		path('<int:pk>/ingrediente',ActualizarIngrediente.as_view(),name = 'actualizar-ingrediente')])),
 	path('eliminar/',include([
-		path('<int:pk>/fecha',EliminarFecha.as_view(),name = 'eliminar-compra'),
-		path('<int:pk>/linea',EliminarLineaCompra.as_view(),name = 'eliminar-linea'),
+		path('<int:pk>/fecha',EliminarFecha.as_view(),name = 'eliminar-fecha'),
+		path('<int:pk>/compra',EliminarLineaCompra.as_view(),name = 'eliminar-compra'),
 		path('<int:pk>/ingrediente',EliminarIngrediente.as_view(),name = 'eliminar-ingrediente')])),
+	path('listar/', include([
+		path('fechas',ListarFechas.as_view(),name = 'listar-fechas')])),
 	]

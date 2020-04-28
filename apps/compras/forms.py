@@ -26,7 +26,7 @@ class LineaDeCompraForm(forms.ModelForm):
 		}
 		
 		widgets={
-		'compra':forms.Select(attrs={'class':'form-control'}),
+		'fecha':forms.Select(attrs={'class':'form-control'}),
 		'ingrediente':forms.Select(attrs={'class':'form-control'}),
 		'cantidad':forms.TextInput(attrs={'class':'form-control'}),
 		'total':forms.TextInput(attrs={'class':'form-control'}),

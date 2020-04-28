@@ -60,12 +60,20 @@ class ActualizarFecha(UpdateView):
 		else:
 			return render_to_response(self.get_context_data(form=form))
 
+class ListarFechas(generic.ListView):
+	model = LineaDeCompra
+	template_name = 'ListarFechas.html'
+	queryset = LineaDeCompra.objects.all().order_by('-fecha')
+
+class DetallesCompra(generic.DetailView):
+	pass
+
 class RegistrarLineaCompra(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = LineaDeCompra
 	template_name = 'CrearLineaDeCompra.html'
 	form_class = LineaDeCompraForm
-	success_url = 'compra'
+	success_url = 'fecha'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarLineaCompra,self).get_context_data(**kwargs)
@@ -88,7 +96,7 @@ class ActualizarLineaCompra(UpdateView):
 	model = LineaDeCompra
 	template_name = 'CrearLineaDeCompra.html'
 	form_class = LineaDeCompraForm
-	success_url = 'compra'
+	success_url = 'fecha'
 
 	def get_context_data(self, **kwargs):
 		context = super(ActualiarLineaCompra,self).get_context_data(**kwargs)
@@ -111,7 +119,7 @@ class RegistrarIngrediente(CreateView):
 	model = Ingrediente
 	template_name = 'CrearIngrediente.html'
 	form_class = IngredienteForm
-	success_url = 'linea'
+	success_url = 'compra'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarIngrediente,self).get_context_data(**kwargs)
@@ -134,7 +142,7 @@ class ActualizarIngrediente(UpdateView):
 	model = Ingrediente
 	template_name = 'CrearIngrediente.html'
 	form_class = IngredienteForm
-	success_url = 'linea'
+	success_url = 'compra'
 
 	def get_context_data(self, **kwargs):
 		context = super(ActualizarIngrediente,self).get_context_data(**kwargs)
