@@ -1,15 +1,13 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic, View
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
-from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
-from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import*
+from django.http import*
 from apps.compras.forms import*
 from apps.compras.models import*
-
+from django.views.generic import*
 # Create your views here.
 def index(request):
-	ingrediente = Ingrediente.objects.all().count()
+	ingrediente = Ingrediente.objects.filter(status__iexact='D').count()
 	numero_visitas = request.session.get('numero_visitas',0)
 	request.session['numero_visitas'] = numero_visitas+1
 	return render(request,'index.html', {'ingrediente':ingrediente,
@@ -60,13 +58,6 @@ class ActualizarFecha(UpdateView):
 		else:
 			return render_to_response(self.get_context_data(form=form))
 
-class ListarFechas(generic.ListView):
-	model = LineaDeCompra
-	template_name = 'ListarFechas.html'
-	queryset = LineaDeCompra.objects.all().order_by('-fecha')
-
-class DetallesCompra(generic.DetailView):
-	pass
 
 class RegistrarLineaCompra(CreateView):
 	"""docstring for RegistrarCompra"""
@@ -176,3 +167,11 @@ class EliminarIngrediente(DeleteView):
 	model = Ingrediente
 	template_name = 'EliminarIngrediente'
 	reverse_lazy('/')
+
+class ListarCompras(ListView):
+	model = LineaDeCompra
+	template_name = 'compras_diarias.html'
+
+class DetallesCompra(DetailView):
+	model = LineaDeCompra
+	template_name = 'detalles_compra.html'

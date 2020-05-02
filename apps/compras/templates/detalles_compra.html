@@ -1,0 +1,24 @@
+{%extends "base/base.html"%}
+{%block content%}
+<h2>Compras realizadas el {{lineadecompra.fecha.fecha}}</h2>
+	<div class="container-fluid">
+		<table class="table table-striped table bordered table responsive-md">
+			<thead>Listado de compras
+				<tr> 
+					<th>Ingrediente</th>
+					<th>Precio unitario</th>
+					<th>Cantidad</th>
+					<th>Total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{lineadecompra.ingrediente.nombre}}</td>
+					<td>{{lineadecompra.ingrediente.precio_unit}}</td>
+					<td>{{lineadecompra.cantidad}}</td>
+					<td>{{lineadecompra.total}}</td>
+				</tr>
+			</tbody>	
+		</table>
+	</div>
+{%endblock%}

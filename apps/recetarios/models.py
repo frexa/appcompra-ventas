@@ -21,3 +21,6 @@ class Elaboracion(models.Model):
 	receta = models.ForeignKey(Receta, on_delete = models.CASCADE)
 	ingrediente = models.ForeignKey(Ingrediente, on_delete = models.CASCADE)
 	medida = models.FloatField(default=0.0)
+	
+	class Meta:
+		verbose_name = 'Elaboracion'

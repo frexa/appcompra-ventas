@@ -5,11 +5,12 @@ class FechaDeCompraForm(forms.ModelForm):
 	class Meta:
 		model = FechaDeCompra
 		
-		fields = ['fecha']
+		fields = ['id','fecha']
 
-		labels={'fehca':'Fecha de compra:'}
+		labels={'id':'Código','fecha':'Fecha de compra:'}
 
 		widgets={
+		'id':forms.TextInput(attrs={'class':'form-control'}),
 		'fecha':forms.SelectDateWidget(attrs={'class':'form-control'})
 		}
 

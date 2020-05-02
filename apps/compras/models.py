@@ -7,13 +7,15 @@ from django.utils import timezone
 
 class FechaDeCompra(models.Model):
 	"""docstring for Compras"""
+	id = models.UUIDField( primary_key=True,default = uuid.uuid4)
 	fecha = models.DateField(default = timezone.now)
 
 	def __str__(self):
 		return '%s'%(self.fecha)
 
 	def get_absolute_url(self):
-		return reverse('fecha-detail', args=[srt(self.id)])
+		return reverse('fecha-detail', args=[str(self.id)])
+
 
 class Ingrediente(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Código único para cada ingrediente")
@@ -30,14 +32,17 @@ class Ingrediente(models.Model):
 
 class LineaDeCompra(models.Model):
 	"""docstring for LineaDeCompra"""
-	id = models.UUIDField(primary_key=True, default = uuid.uuid4)
 	fecha = models.ForeignKey(FechaDeCompra, on_delete = models.CASCADE)
 	ingrediente = models.ForeignKey(Ingrediente, on_delete = models.CASCADE)
 	cantidad = models.IntegerField(default=0)
 	total = models.FloatField(default=0.0)
 
+	def calculartotal(self, *args):
+		self.total = self.cantidad * self.ingrediente.precio_unit
+		return self.total
+
 	def __str__(self):
-		return '%s'%(self.fecha.fecha)
+		return '%s'%(self.fecha)
 
 	def get_absolute_url(self):
-		return reverse('compra-detail', args=[str(self.id)])
+		return reverse('detalles-compra', args=[self.id])

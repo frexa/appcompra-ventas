@@ -15,6 +15,8 @@ urlpatterns=[
 		path('<int:pk>/fecha',EliminarFecha.as_view(),name = 'eliminar-fecha'),
 		path('<int:pk>/compra',EliminarLineaCompra.as_view(),name = 'eliminar-compra'),
 		path('<int:pk>/ingrediente',EliminarIngrediente.as_view(),name = 'eliminar-ingrediente')])),
-	path('listar/', include([
-		path('fechas',ListarFechas.as_view(),name = 'listar-fechas')])),
+	path('listar/',include([
+		path('compras', ListarCompras.as_view(),name = 'listar-compras')])),
+	path('detalles/',include([ 
+		path('<int:pk>/compra',DetallesCompra.as_view(), name = 'detalles-compra')])),
 	]
