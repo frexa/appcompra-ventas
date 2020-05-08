@@ -14,13 +14,19 @@ class Receta(models.Model):
 		return '%s'%(self.nombre)
 	
 	def get_absolute_url(self):
-		return reverse('receta-detail', args=[str(self.id)])
+		return reverse('datalles-receta', args=[str(self.id)])
 
 class Elaboracion(models.Model):
 	"""docstring for Elaboracion"""
 	receta = models.ForeignKey(Receta, on_delete = models.CASCADE)
 	ingrediente = models.ForeignKey(Ingrediente, on_delete = models.CASCADE)
 	medida = models.FloatField(default=0.0)
+
+	def __str__(self):
+		return '%s' %(self.receta)
+	
+	def get_absolute_url(self):
+		return reverse('datalles-elaboracion', args=[str(self.id)])
 	
 	class Meta:
-		verbose_name = 'Elaboracion'
+		verbose_name = "Elaboracion"

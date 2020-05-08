@@ -14,7 +14,7 @@ class FechaDeCompra(models.Model):
 		return '%s'%(self.fecha)
 
 	def get_absolute_url(self):
-		return reverse('fecha-detail', args=[str(self.id)])
+		return reverse('detalles-compra', args=[str(self.id)])
 
 
 class Ingrediente(models.Model):
@@ -45,4 +45,4 @@ class LineaDeCompra(models.Model):
 		return '%s'%(self.fecha)
 
 	def get_absolute_url(self):
-		return reverse('detalles-compra', args=[self.id])
+		return reverse('detalles-compra', args=[str(self.id)])

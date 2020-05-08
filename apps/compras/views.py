@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
-from django.urls import reverse, reverse_lazy
+from django.urls import*
 from django.contrib.auth.mixins import*
 from django.http import*
 from apps.compras.forms import*
 from apps.compras.models import*
 from django.views.generic import*
+from django.views.generic.detail import*
 # Create your views here.
 def index(request):
 	ingrediente = Ingrediente.objects.filter(status__iexact='D').count()
@@ -17,7 +18,7 @@ class RegistrarFecha(CreateView):
 	model = FechaDeCompra
 	template_name = 'CrearCompra.html'
 	form_class = FechaDeCompraForm
-	success_url = 'ingrediente'
+	success_url = 'fecha'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarFecha,self).get_context_data(**kwargs)
@@ -40,7 +41,7 @@ class ActualizarFecha(UpdateView):
 	model = FechaDeCompra
 	template_name = 'CrearCompra.html'
 	form_class = FechaDeCompraForm
-	success_url = 'ingrediente'
+	success_url = 'fecha'
 
 	def get_context_data(self, **kwargs):
 		context = super(ActualizarFecha,self).get_context_data(**kwargs)
@@ -64,7 +65,7 @@ class RegistrarLineaCompra(CreateView):
 	model = LineaDeCompra
 	template_name = 'CrearLineaDeCompra.html'
 	form_class = LineaDeCompraForm
-	success_url = 'fecha'
+	success_url = 'compra'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarLineaCompra,self).get_context_data(**kwargs)
@@ -87,7 +88,7 @@ class ActualizarLineaCompra(UpdateView):
 	model = LineaDeCompra
 	template_name = 'CrearLineaDeCompra.html'
 	form_class = LineaDeCompraForm
-	success_url = 'fecha'
+	success_url = 'compra'
 
 	def get_context_data(self, **kwargs):
 		context = super(ActualiarLineaCompra,self).get_context_data(**kwargs)
@@ -110,7 +111,7 @@ class RegistrarIngrediente(CreateView):
 	model = Ingrediente
 	template_name = 'CrearIngrediente.html'
 	form_class = IngredienteForm
-	success_url = 'compra'
+	success_url = 'ingrediente'
 
 	def get_context_data(self, **kwargs):
 		context = super(RegistrarIngrediente,self).get_context_data(**kwargs)
@@ -133,7 +134,7 @@ class ActualizarIngrediente(UpdateView):
 	model = Ingrediente
 	template_name = 'CrearIngrediente.html'
 	form_class = IngredienteForm
-	success_url = 'compra'
+	success_url = 'ingrediente'
 
 	def get_context_data(self, **kwargs):
 		context = super(ActualizarIngrediente,self).get_context_data(**kwargs)
@@ -169,9 +170,21 @@ class EliminarIngrediente(DeleteView):
 	reverse_lazy('/')
 
 class ListarCompras(ListView):
-	model = LineaDeCompra
+	model = FechaDeCompra
 	template_name = 'compras_diarias.html'
 
-class DetallesCompra(DetailView):
-	model = LineaDeCompra
+class DetallesCompra(SingleObjectMixin,ListView):
 	template_name = 'detalles_compra.html'
+	paginate_by = 5
+	
+	def get(self, request, *args, **kwargs):
+		self.object = self.get_object(queryset = FechaDeCompra.objects.all())
+		return super(DetallesCompra,self).get(request, *args, **kwargs)
+
+	def get_context_data(self, **kwargs):
+		context = super(DetallesCompra,self).get_context_data(**kwargs)
+		context['fechadecompra'] = self.object
+		return context
+
+	def get_queryset(self):
+		return self.object.lineadecompra_set.all()

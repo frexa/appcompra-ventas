@@ -18,5 +18,5 @@ urlpatterns=[
 	path('listar/',include([
 		path('compras', ListarCompras.as_view(),name = 'listar-compras')])),
 	path('detalles/',include([ 
-		path('<int:pk>/compra',DetallesCompra.as_view(), name = 'detalles-compra')])),
+		path('<uuid:pk>/compra',DetallesCompra.as_view(), name = 'detalles-compra')])),
 	]

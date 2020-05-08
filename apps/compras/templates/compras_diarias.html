@@ -1,10 +1,12 @@
 {%extends "base/base.html"%}
 {%block content%}
-<div class="page-header">Fechas:</div>
+<div class="page-header">Fechas de compras realizadas:</div>
  <ul>
- 	{%for lineadecompra in object_list%}
- 	<li><a href="{{lineadecompra.get_absolute_url}}">{{lineadecompra.fecha.fecha}}</a></li>
+ 	{%for fechadecompra in object_list%}
+ 	<li><a href="{{fechadecompra.get_absolute_url}}">{{fechadecompra.fecha}}</a></li>
  	{%empty%}
+
+ 	<ol><a href="{{fechadecompra.get_absolute_url}}">Ingredientes comprados.</a></ol>
  	<li>¡No se encontro ninguna fecha de compras registrada!</li>
  	{%endfor%}
  </ul>
