@@ -18,11 +18,10 @@ class LineaDeCompraForm(forms.ModelForm):
 	class Meta:
 		model = LineaDeCompra
 
-		fields= ['id','fecha', 'ingrediente', 'cantidad','total']
+		fields= ['id','fecha', 'ingrediente', 'cantidad']
 		
 		lebels={'fecha':'Fecha de compra:','ingrediente':'Rubro:',
 		'cantidad':'Cantidad:',
-		'total':'Total a pagar:',
 		'id':'Código'
 		}
 		
@@ -30,7 +29,6 @@ class LineaDeCompraForm(forms.ModelForm):
 		'fecha':forms.Select(attrs={'class':'form-control'}),
 		'ingrediente':forms.Select(attrs={'class':'form-control'}),
 		'cantidad':forms.TextInput(attrs={'class':'form-control'}),
-		'total':forms.TextInput(attrs={'class':'form-control'}),
 		'id':forms.TextInput(attrs={'class':'form-control'})
 		}
 

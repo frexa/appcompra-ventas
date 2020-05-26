@@ -35,11 +35,12 @@ class LineaDeCompra(models.Model):
 	fecha = models.ForeignKey(FechaDeCompra, on_delete = models.CASCADE)
 	ingrediente = models.ForeignKey(Ingrediente, on_delete = models.CASCADE)
 	cantidad = models.IntegerField(default=0)
-	total = models.FloatField(default=0.0)
+	total = models.FloatField(blank =True, null= True,default=0.0)
 
-	def calculartotal(self, *args):
-		self.total = self.cantidad * self.ingrediente.precio_unit
-		return self.total
+	def save(self, *args, **kwargs):
+		if not self.total:
+			self.total = self.cantidad * self.ingrediente.precio_unit
+		return super().save(*args, **kwargs)
 
 	def __str__(self):
 		return '%s'%(self.fecha)
