@@ -125,5 +125,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'index_co'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

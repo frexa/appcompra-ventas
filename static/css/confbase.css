@@ -3,8 +3,7 @@
 	padding: 0px;
 }
 
-/*body{
-	font-size: 80%;
-	background-image: url('imagenes/reposteria.jpg');
-	background-size: 100%;
-}*/
+
+body{
+	color: hsl(240, 100%, 50%);
+}

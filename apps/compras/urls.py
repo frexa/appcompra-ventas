@@ -2,7 +2,7 @@ from django.urls import path, include
 from apps.compras.views import*
 
 urlpatterns=[
-	path('',index, name = 'index'),
+	path('',index, name = 'index_co'),
 	path('registrar/', include([
 		path('fecha',RegistrarFecha.as_view(), name='registrar-fecha'),
 		path('ingrediente',RegistrarIngrediente.as_view(),name='registrar-ingrediente'),
