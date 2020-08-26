@@ -26,7 +26,7 @@ class Elaboracion(models.Model):
 		return '%s' %(self.receta)
 	
 	def get_absolute_url(self):
-		return reverse('datalles-elaboracion', args=[str(self.id)])
+		return reverse('datalles-receta', args=[str(self.id)])
 	
 	class Meta:
 		verbose_name = "Elaboracion"

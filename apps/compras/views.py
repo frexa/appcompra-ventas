@@ -6,6 +6,7 @@ from apps.compras.forms import*
 from apps.compras.models import*
 from django.views.generic import*
 from django.views.generic.detail import*
+from apps.compras.reportes.reportes_compras_semanales import ReporteComprasSemanales
 # Create your views here.
 def index(request):
 	ingrediente = Ingrediente.objects.filter(status__iexact='D').count()
@@ -13,6 +14,14 @@ def index(request):
 	request.session['numero_visitas'] = numero_visitas+1
 	return render(request,'index.html', {'ingrediente':ingrediente,
 										'numero_visitas':numero_visitas})
+
+def reporte_compras_semanales(request):
+	response = HttpResponse(content_type='aplication/pdf')
+	response['Content-Disposition']='attachment;filename="comprassemanales.pdf"'
+	report = ReporteComprasSemanales()
+	response.write(report.run())
+	return response
+
 class RegistrarFecha(CreateView):
 	"""docstring for RegistrarCompra"""
 	model = FechaDeCompra

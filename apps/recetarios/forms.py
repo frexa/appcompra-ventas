@@ -1,6 +1,5 @@
 from django import forms
-from apps.recetarios.models import Receta
-
+from apps.recetarios.models import*
 class RecetaForm(forms.ModelForm):
 	class Meta:
 		model = Receta
@@ -22,3 +21,22 @@ class RecetaForm(forms.ModelForm):
 			'required':'off'
 			})
 		}
+
+class ElaborarForm(forms.ModelForm):
+	class Meta:
+		model = Elaboracion
+		
+		fields = ['receta', 'ingrediente','medida']
+		
+		labels = {
+		'receta':'Receta',
+		'ingrediente':'Ingrediente',
+		'medida':'Medida'
+		}
+
+		widgets = {
+		'receta':forms.Select(attrs={'class':'form-control'}),
+		'ingrediente':forms.Select(attrs={'class':'form-control'}),
+		'medida':forms.TextInput(attrs = {'class':'form-control'})
+		}
+		

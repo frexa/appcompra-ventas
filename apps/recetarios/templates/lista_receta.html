@@ -1,0 +1,11 @@
+{%extends "base/base.html"%}
+{%block content%}
+<div class="page-header">Recetario:</div>
+ <ul>
+ 	{%for receta in object_list%}
+ 	<li><a href="{%url 'detalles-receta' receta.pk%}">{{receta.nombre}}</a></li>
+ 	{%empty%}
+	<li>¡No se encontro ninguna receta registrada!</li>
+ 	{%endfor%}
+ </ul>
+{%endblock%}

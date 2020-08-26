@@ -1,11 +1,35 @@
 {%extends "base/base.html"%}
 {%block content%}
-<h2>Compras realizadas el {{fechadecompra.fecha}}</h2>
+<h2>Compras realizadas el {{fechadecompra.fecha}}</h2><br>
 	<div class="container-fluid">
-		<ol>
-			{%for lineadecompra in page_obj%}
-			<li>{{lineadecompra.ingrediente}}</li>
-			{%endfor%}
-		</ol>
+		<table class="table table-md table-striped table-responsive">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Precio Unit</th>
+					<th>Peso por Kg</th>
+					<th>Cantidad</th>
+					<th>Peso total</th>
+					<th>Costo total</th>
+				</tr>
+			</thead>
+			<tbody>
+				{%for lineadecompra in page_obj%}
+				<tr>
+					<td>{{lineadecompra.ingrediente}}</td>
+					<td>{{lineadecompra.ingrediente.precio_unit}}</td>
+					<td>{{lineadecompra.ingrediente.peso}}</td>
+					<td>{{lineadecompra.cantidad}}</td>
+					<td>{{lineadecompra.total_peso}}</td>
+					<td>{{lineadecompra.total}}</td>
+					<td>
+					<a class="btn btn-primary btn-sm" href="{%url 'registrar-compra'%}" role="button">Agregar</a>
+					<a class="btn btn-dark btn-sm" href="" role="button">Modificar</a>
+					<a class="btn btn-danger btn-sm" href="" role="button">Eliminar</a>
+					</td>
+				</tr>
+				{%endfor%}
+			</tbody>
+		</table>
 	</div>
 {%endblock%}
