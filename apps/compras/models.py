@@ -39,7 +39,7 @@ class LineaDeCompra(models.Model):
 	total_peso = models.FloatField(blank = True, null = True)
 
 	def save(self, *args, **kwargs):
-		if not self.total or self.total_peso:
+		if not self.total or not self.total_peso:
 			self.total = self.cantidad * self.ingrediente.precio_unit
 			self.total_peso = self.cantidad * self.ingrediente.peso
 		return super().save(*args, **kwargs)

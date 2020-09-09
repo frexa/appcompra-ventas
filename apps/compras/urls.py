@@ -8,8 +8,8 @@ urlpatterns=[
 		path('ingrediente',RegistrarIngrediente.as_view(),name='registrar-ingrediente'),
 		path('compra',RegistrarLineaCompra.as_view(),name='registrar-compra')])),
 	path('actualizar/',include([
-		path('<int:pk>/fecha',ActualizarFecha.as_view(),name = 'actualizar-fecha'),
-		path('<uuid:pk>/compra',ActualizarLineaCompra.as_view(),name = 'actualizar-compra'),
+		path('<uuid:pk>/fecha',ActualizarFecha.as_view(),name = 'actualizar-fecha'),
+		path('<int:pk>/compra',ActualizarLineaCompra.as_view(),name = 'actualizar-compra'),
 		path('<uuid:pk>/ingrediente',ActualizarIngrediente.as_view(),name = 'actualizar-ingrediente')])),
 	path('eliminar/',include([
 		path('<int:pk>/fecha',EliminarFecha.as_view(),name = 'eliminar-fecha'),

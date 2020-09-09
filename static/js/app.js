@@ -5,7 +5,7 @@ $(document).ready(function() {
         //El metodo .modal(), se utiliza para abrir la ventana modal de bootstrap 4
         $('#modal-date').modal();
 
-    })
+    });
 
     $('#checkin').datepicker({
         language: "es",

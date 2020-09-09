@@ -1,0 +1,1598 @@
+@media only screen and (min-width: 768px) {
+    .nav.navbar-nav>li:hover>ul.sub-menu {
+        display: block;
+        -webkit-animation: fadeInUp 400ms;
+        animation: fadeInUp 400ms;
+    }
+    ul.sub-menu {
+        position: absolute;
+        top: 60px;
+        right: 4px;
+        background: #E02126;
+        padding: 10px 0;
+        width: 240px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        display: none;
+        z-index: 999;
+        border: 5px solid #E02126;
+		border-radius: 20px;
+    }
+    #header .navbar-nav li ul.sub-menu li a {
+        padding-left: 20px;
+    }
+}
+
+
+/*md only*/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-md-4.portfolio-item {
+        width: 33%;
+    }
+    #jssor_3{
+        width: 0px;
+        height: 0px;
+    }
+    #jssor_2{
+        width: 0px;
+        height: 0px;
+    }
+}
+
+
+/*sm only*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-sm-4.portfolio-item {
+        width: 33%;
+    }
+    #jssor_3{
+        width: 0px;
+        height: 0px;
+    }
+    #jssor_2{
+        width: 0px;
+        height: 0px;
+    }
+}
+
+
+/* md */
+
+@media only screen and (max-width: 6000px) {
+    /*Pricing Table*/
+    .single-price .plan-price:after {
+        border-width: 100px;
+        margin-left: -100px;
+    }
+    .single-table .table-content {
+        padding: 20px;
+    }
+    .table-header {
+        padding: 0 10px 7px;
+    }
+    .single-table:before {
+        border-width: 0 106px 60px;
+    }
+    .single-table .btn-signup:after {
+        border-width: 78px 106px 0;
+    }
+	#slider figure{
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#slider2 figure{
+		position: relative;
+		width: 0%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#logohead2 {
+		width: 0%;
+
+    }
+	#clavedigital{
+		position: absolute;
+		top: 14.5%;
+        left: 4.3%;
+        width: 650px;
+    }
+
+	#clavedigital2{
+        visibility: hidden;
+		position: absolute;
+		top: -278px;
+		left: 0px;
+}
+
+#sliderNew{
+    position: relative;
+    top: -100px;
+    padding-bottom: 10px;
+}
+
+#jssor_3{
+    width: 0px;
+    height: 0px;
+}
+#jssor_2{
+    width: 0px;
+    height: 0px;
+}
+
+#sliderNew480{
+    width: 0px;
+    height: 0px;
+}
+
+#sliderNew768{
+    width: 0px;
+    height: 0px;
+}
+
+}
+
+@media only screen and (max-width: 3600px) {
+    #clavedigital{
+		position: absolute;
+		top: 300px;
+        left: 4.3%;
+        width: 600px;
+    }
+        #sliderNew{
+            position: relative;
+            top: -85px;
+            padding-bottom: 20px;
+        }
+}
+
+@media only screen and (max-width: 3300px) {
+    #clavedigital{
+		position: absolute;
+		top: 295px;
+        left: 4%;
+        width: 550px;
+    }
+    #sliderNew{
+            position: relative;
+            top: -60px;
+            padding-bottom: 35px;
+        }
+}
+
+@media only screen and (max-width: 3000px) {
+    #clavedigital{
+		position: absolute;
+		top: 295px;
+        left: 135px;
+        width: 470px;
+}
+    #sliderNew{
+        position: relative;
+        top: -40px;
+        padding-bottom: 50px;
+}
+
+}
+
+@media only screen and (max-width: 2500px) {
+    #sliderNew{
+        position: relative;
+        top: -5px;
+        padding-bottom: 65px;
+    }
+    #clavedigital{
+		position: absolute;
+		top: 255px;
+        left: 105px;
+        width: 430px;
+}
+
+}
+
+@media only screen and (max-width: 2265px) {  
+    #sliderNew{
+        position: relative;
+        top: 10px;
+        padding-bottom: 75px;
+    }  
+    #clavedigital{
+		position: absolute;
+		top: 237px;
+        left: 86px;
+        width: 390px;
+}
+}
+
+@media only screen and (max-width: 2100px) {    
+    #clavedigital{
+		position: absolute;
+		top: 237px;
+        left: 86px;
+        width: 370px;
+}
+#sliderNew{
+    position: relative;
+    top: 20px;
+    padding-bottom: 80px;
+}
+}
+
+@media only screen and (max-width: 1950px) {
+    #sliderNew{
+        position: relative;
+        top: 35px;
+        padding-bottom: 90px;
+    }
+    #clavedigital{
+		position: absolute;
+		top: 238px;
+        left: 85px;
+        width: 330px;
+}
+}
+
+@media only screen and (max-width: 1850px) {
+    #sliderNew{
+        position: relative;
+        top: 40px;
+        padding-bottom: 93px;
+    }
+    #clavedigital{
+		position: absolute;
+		top: 240px;
+        left: 95px;
+        width: 300px;
+}
+}
+
+@media only screen and (max-width: 1650px) {
+    #sliderNew{
+        position: relative;
+        top: 55px;
+        padding-bottom: 105px;
+    }
+    #clavedigital{
+		position: absolute;
+		top: 230px;
+        left: 78px;
+        width: 270px;
+}
+}
+
+@media only screen and (max-width: 1500px) {
+    /*Pricing Table*/
+    .single-price .plan-price:after {
+        border-width: 100px;
+        margin-left: -100px;
+    }
+    .single-table .table-content {
+        padding: 20px;
+    }
+    .table-header {
+        padding: 0 10px 7px;
+    }
+    .single-table:before {
+        border-width: 0 106px 60px;
+    }
+    .single-table .btn-signup:after {
+        border-width: 78px 106px 0;
+    }
+	#slider figure{
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#slider2 figure{
+		position: relative;
+		width: 0%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#logohead2 {
+		width: 0%;
+	}	
+	#home-slider2{
+		bottom: 200px;
+	}
+	#clavedigital{
+		position: absolute;
+		top: 207px;
+        left: 58px;
+        width: 265px;
+	}
+	#clavedigital2{
+        visibility: hidden;
+		position: absolute;
+		top: -1154px;
+		left: 0px;
+	}
+	#marquesina{
+		width: 85%;
+    }
+    #sliderNew{
+        position: relative;
+        top: 68px;
+        padding-bottom: 112px;
+    }
+}
+
+@media only screen and (max-width: 1370px) {
+    #clavedigital{
+		position: absolute;
+		top: 210px;
+        left: 76px;
+        width: 230px;
+    }
+        #sliderNew{
+            position: relative;
+            top: 68px;
+            padding-bottom: 107px;
+        }
+}
+
+@media only screen and (max-width: 1280px) {
+    #sliderNew{
+        position: relative;
+        top: 80px;
+        padding-bottom: 118px;
+    }
+    #clavedigital{
+		position: absolute;
+		top: 204px;
+        left: 60px;
+        width: 230px;
+	}
+}
+
+@media only screen and (max-width: 1180px) {
+    #clavedigital{
+		position: absolute;
+		top: 205px;
+    	left: 55px;
+    	width: 200px;
+    }
+    #sliderNew{
+        position: relative;
+        top: 90px;
+        padding-bottom: 125px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #sliderNew{
+        position: relative;
+        top: 100px;
+        padding-bottom: 130px;
+    }
+    #clavedigital{
+		position: absolute;
+		top: 193px;
+        left: 37px;
+        width: 190px;
+	}
+}
+
+/* sm */
+
+@media only screen and (max-width: 992px) {
+    #company-information .padding-top{
+        padding-top: 15px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    #header .navbar-nav.navbar-right li {
+        padding: 0;
+    }
+    #header .navbar-nav.navbar-right>li a {
+        padding: 20px 10px;
+    }
+    #home-slider {
+        margin-top: 0px;
+		padding-top: 10px;
+    }
+    #home-slider .main-slider {
+        height: 250px;
+    }
+    #home-slider .slide-text {
+        top: 50;
+        width: 60%;
+    }
+    #home-slider h1 {
+        margin-top: 0;
+    }
+    #home-slider .slider-hill {
+        width: 400px;
+    }
+    #home-slider .slider-house {
+        width: 250px;
+        right: 90px;
+        bottom: -20px;
+    }
+    #home-slider .slider-sun {
+        right: 255px;
+        bottom: 65px;
+        width: 60px
+    }
+    #home-slider .slider-birds1 {
+        right: 320px;
+        bottom: 60px;
+        width: 70px;
+    }
+    #home-slider .slider-birds2 {
+        right: 0;
+        bottom: 90px;
+        width: 80px;
+    }
+    /*Pricing Table*/
+    .single-price {
+        margin-bottom: 40px;
+    }
+    .single-price .plan-price {
+        height: 140px;
+    }
+    .single-price .plan-price:after {
+        border-width: 140px;
+        margin-left: -140px;
+    }
+    .single-table {
+        margin-bottom: 50px;
+    }
+    .single-table:before {
+        border-width: 0 172px 60px;
+    }
+    .single-table .btn-signup:after {
+        border-width: 78px 173px 0;
+    }
+    #price-table2 {
+        margin-bottom: 100px;
+    }
+    .nav.navbar-nav.post-nav li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .masonery_area .nav.nav-justified.post-nav li {
+        display: table-cell;
+    }
+    /* Blog */
+    .post-comment {
+        padding-left: 0;
+    }
+    .post-comment .pull-left img {
+        margin-right: 20px;
+    }
+    .parrent .post-comment {
+        margin-left: 0;
+    }
+    .parrent .media-list {
+        margin-left: 40px;
+    }
+    .single-blog.two-column .post-overlay {
+/*        margin-top: 0;*/
+    }
+	#slider figure{
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#slider2 figure{
+		position: relative;
+		width: 0%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#clavedigital{
+		position: absolute;
+		top: 192px;
+    	left: 45px;
+    	width: 180px;
+	}
+	
+	#marquesina{
+		width: 80%;
+}
+
+#sliderNew{
+    visibility: visible;
+    position: relative;
+    top: 100px;
+    padding-bottom: 130px;
+}
+
+@media only screen and (max-width: 920px) {
+    #clavedigital{
+		position: absolute;
+		top: 195px;
+    	left: 44px;
+    	width: 150px;
+    }
+    #sliderNew{
+        visibility: visible;
+        position: relative;
+        top: 105px;
+        padding-bottom: 130px;
+    }
+
+}
+
+@media only screen and (max-width: 870px) {
+    #clavedigital{
+		position: absolute;
+		top: 190px;
+    	left: 45px;
+    	width: 140px;
+	}
+}
+
+
+/* xs */
+
+
+@media only screen and (max-width: 778px) {
+	
+	#boton1{
+		width: auto;
+	}
+	
+    #company-information img{
+        margin-bottom: 20px;
+    }
+    .copyright-text{
+        color: #FFFFFF;
+    }
+    .clients-logo > div{
+        margin: 17.5px ;
+    }
+    .tour-button .btn-common {
+        float: none;
+        margin-top: 20px;
+        background-color: #fff;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .padding {
+        padding: 30px 0;
+    }
+    #header {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+    .social-icons.pull-right {
+        float: right!important;
+    }
+    #header .navbar-inverse .navbar-toggle,
+    #header .navbar-inverse .navbar-toggle:focus {
+        border-color: #FFF;
+        margin-top: 15px;
+        margin-right: 5px;
+        outline: none;
+    }
+    .navbar-header .navbar-toggle .icon-bar {
+        background-color: #FFFFFF;
+    }
+    #header .navbar-inverse .navbar-toggle:hover {
+        background: rgba(51,51,51,1.00);
+    }
+    #header .navbar-inverse .navbar-toggle:hover .icon-bar {
+        background: #fff;
+    }
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form {
+        border-top: 0;
+    }
+    .navbar.navbar-inverse {
+        margin-top: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .social-icons ul li:first-child {
+        padding-left: 0;
+    }
+    .search {
+        right: 64px;
+    }
+    #header .navbar-nav.navbar-right li>a>i {
+        display: inline-block;
+        /*float: right;*/
+        padding: 8px 10px 8px 12px
+    }
+    #header .navbar-nav.navbar-right li>a {
+		padding-top: 19px;
+    }
+    #header .navbar-nav li ul.sub-menu li a {
+        padding: 5px 10px;
+    }
+    #header .navbar-inverse .navbar-nav li.active>a,
+    #header .navbar-inverse .navbar-nav li.active>a:focus,
+    #header .navbar-nav.navbar-right li>a:hover {
+        border: none;
+    }
+    #home-slider {
+        margin: 0px 0px;
+		padding-top: 0px
+    }
+    #home-slider .main-slider {
+        height: 200px;
+    }
+    #home-slider .slide-text {
+        top: 0;
+        width: 80%;
+        text-align: center;
+    }
+    #home-slider .slider-hill {
+        right: 50%;
+        margin-right: -200px;
+    }
+    #home-slider .slider-house {
+        right: 50%;
+        margin-right: -125px;
+    }
+    #home-slider .slider-sun {
+        right: 50%;
+        margin-right: 60px;
+    }
+    #home-slider .slider-birds1 {
+        width: 70px;
+        right: 50%;
+        margin-right: 120px;
+    }
+    #home-slider .slider-birds2 {
+        width: 70px;
+        right: 50%;
+        margin-right: -200px;
+    }
+    /*Pricing Table*/
+    .single-price,
+    .single-table {
+        margin-bottom: 45px;
+    }
+    .single-price .plan-price {
+        height: 200px;
+        padding-top: 25px;
+    }
+    .single-price .plan-price:after {
+        border-width: 200px;
+        margin-left: -200px;
+    }
+    .single-table:before {
+        border-width: 0 225px 60px;
+    }
+    .single-table .btn-signup:after {
+        border-width: 78px 225px 0;
+    }
+    .single-table .btn-signup a {
+        padding: 15px;
+    }
+    #action.responsive {
+        height: 255px;
+    }
+    .action.take-tour {
+        margin-top: -95px;
+    }
+    .action.take-tour .col-sm-7 {
+        width: 100%;
+        text-align: center;
+    }
+    .action.take-tour .col-sm-5 {
+        width: 100%;
+        margin-top: 120px;
+    }
+    .single-features {
+        padding-bottom: 0;
+        padding-top: 30px;
+    }
+    .single-features img {
+        margin-bottom: 25px;
+    }
+    .single-features {
+        text-align: left
+    }
+    .single-features * {
+        display: inline-block;
+        text-align: left;
+    }
+    /* about us */
+    .team-single {
+        margin-bottom: 30px;
+    }
+    #company-information.choose .padding-top {
+        padding-top: 0;
+    }
+    /* Blog */
+    .arrow-right:after {
+        background: none;
+    }
+    .arrow-left:before {
+        background: none;
+    }
+    .col-sm-6.padding-right.arrow-right {
+        padding-right: 15px;
+    }
+    .col-sm-6.padding-left.padding-top.arrow-left {
+        margin-bottom: 70px;
+        padding-left: 15px;
+    }
+    .blog-padding-right {
+        padding-right: 15px;
+    }
+    .nav.nav-justified.post-nav li,
+    .nav.navbar-nav.post-nav li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .author-profile .col-sm-2 img {
+        margin-bottom: 20px;
+        width: auto;
+    }
+    .post-comment {
+        padding-left: 0;
+    }
+    .parrent .post-comment {
+        margin-left: 0;
+    }
+    .parrent .media-list {
+        margin-left: 40px;
+    }
+    .post-comment .pull-left img {
+        margin-right: 10px;
+    }
+    .single-blog.two-column .post-overlay {
+/*        margin-top: 0;*/
+    }
+    /* Portfolio */
+    .project-name h2 {
+        margin-top: 20px;
+    }
+    .portfolio-filter li a {
+        padding: 0 15px;
+    }
+    /*Coming Soon CSS*/
+    #countdown li.angle-one {
+        left: 60px;
+    }
+    #countdown li.angle-two {
+        left: 20px;
+    }
+    #countdown li.angle-three {
+        right: 20px;
+    }
+    #countdown li.angle-four {
+        right: 60px;
+    }
+    #countdown li>span {
+        font-size: 36px;
+        line-height: 36px;
+        margin-top: 30px;
+    }
+    #countdown li.angle-two>span,
+    #countdown li.angle-four>span {
+        margin-top: 60px;
+    }
+    #subscribe {
+        font-size: 14px;
+        text-align: center;
+    }
+    #newsletter .form-control {
+        font-size: 14px;
+        height: 40px
+    }
+    #newsletter i {
+        font-size: 25px;
+    }
+    #countdown li.angle-one span.minutes,
+    #countdown li.angle-one .minute {
+        margin-left: 0
+    }
+    /* Contact-us2 CSS*/
+    #map-section .contact-info {
+        width: 51%;
+        padding: 20px;
+    }
+    #gmap {
+        height: 310px;
+    }
+    #contact-form .btn-submit {
+        width: 50%;
+    }
+    #map-section .contact-info h2 {
+        font-size: 20px;
+    }
+    #map-section .contact-info address {
+        font-size: 14px;
+    }
+    /* 404 error CSS*/
+    #error-page {
+        padding: 50px 25px;
+    }
+    #error-page h2 {
+        font-size: 24px;
+    }
+    .btn-error {
+        font-size: 13px;
+        padding: 12px 18px;
+    }
+	#slider figure{
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#slider2 figure{
+		position: relative;
+		width: 0%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#clavedigital{
+		position: absolute;
+		top: 183px;
+    	left: 30px;
+    	width: 145px;
+    }
+    #sliderNew{
+        visibility: none;
+        position: relative;
+        top: 118px;
+        padding-bottom: 140px;
+    }
+    #jssor_2
+    {
+        visibility: hidden !important;
+    }
+	
+}
+
+@media only screen and (max-width: 725px) {
+    #clavedigital{
+		position: absolute;
+		top: 183px;
+    	left: 30px;
+    	width: 130px;
+    }
+    
+}
+
+@media only screen and (max-width: 680px) {
+    /* Pricing Table*/
+    .single-price,
+    .single-table {
+        margin-bottom: 35px;
+    }
+    .single-price .plan-price {
+        height: 110px;
+        padding-top: 7px;
+    }
+    .single-price .plan-price:after {
+        border-width: 110px;
+        margin-left: -110px;
+    }
+    .single-table:before {
+        border-width: 0 145px 60px;
+    }
+    .single-table .btn-signup:after {
+        border-width: 78px 145px 0;
+    }
+    /* Coming soon */
+    #countdown li.angle-one {
+        left: 25px;
+    }
+    #countdown li.angle-two {
+        left: 10px;
+    }
+    #countdown li.angle-three {
+        right: 10px;
+    }
+    #countdown li.angle-four {
+        right: 25px;
+    }
+    #countdown li>span {
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: 10px;
+    }
+    #countdown li.angle-two>span,
+    #countdown li.angle-four>span {
+        margin-top: 30px;
+    }
+    #subscribe {
+        font-size: 14px;
+        text-align: center;
+    }
+    #newsletter .form-control {
+        font-size: 14px;
+        height: 40px
+    }
+    #newsletter i {
+        font-size: 25px;
+    }
+    #countdown li.angle-one span.minutes,
+    #countdown li.angle-one .minute {
+        margin-left: 0
+    }
+	
+	#home-slider .main-slider {
+        height: 400px;
+	}
+    /* Contact-us2 CSS*/
+    #map-section .contact-info {
+        width: 100%;
+        position: static;
+    }
+    #gmap {
+        height: 390px;
+    }
+    #contact-form .btn-submit {
+        width: 60%;
+    }
+    /* 404 error CSS*/
+    #error-page {
+        padding: 50px 25px;
+    }
+    #error-page h2 {
+        font-size: 24px;
+    }
+    .btn-error {
+        font-size: 10px;
+        padding: 12px 11px;
+    }
+	#slider figure{
+		position: relative;
+		width: 0%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	
+	#slider {
+		position: relative;
+		width: 0%;
+		margin: -19px;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#slider2 figure{
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#logohead {
+		width: 0%;
+			
+	}
+	#logohead2 {
+        
+		width: 50%;
+	}
+	#marquesina{
+		width: 66%;
+	}
+	.p{
+		font-size: 12px;
+	}
+	
+	#clavedigital{
+		visibility: hidden;
+	}
+	#clavedigital2{
+        visibility: visible;
+		position: absolute;
+		top: 480px;
+        left: 19%;
+        width: 60%;
+	}
+	#home-slider {
+        margin: 0px 0px;
+		padding-top: 210px
+    }
+    #jssor_1{
+        visibility: hidden !important;
+    }
+    #jssor_2{
+        visibility: hidden !important;
+    }
+    #sliderNew{
+        visibility: hidden;
+        position: relative;
+        top: 120px;
+        padding-bottom: 100px;
+    }
+    #sliderNew480{
+        visibility: hidden;
+        position: relative;
+        top: 1200px;
+        height: 30px;
+        padding-bottom: 200px;
+    }
+
+    #jssor_3
+    {
+        position:relative;
+        top:0px;
+        left:0px;
+        width:680px !important;
+        height:300px !important;
+    }
+
+    div[data-u='slides12git']{
+        cursor:default;
+        position: relative; 
+        top:100px;
+        left:0px;
+        width:680px !important;
+        height:300px !important;
+    }
+
+    .fitimagen{
+        position: relative;
+        width: 680px;
+        height: 300px;
+    }
+
+    #sliderNew768{
+        position: absolute;
+        top: 75px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    #clavedigital{
+		visibility: hidden;
+	}
+	#clavedigital2{
+        visibility: visible;
+		position: absolute;
+		top: 410px;
+        left: 14%;
+        width: 70%;
+	}
+	#home-slider {
+        margin: 0px 0px;
+		padding-top: 210px
+    }
+    #jssor_1{
+        visibility: hidden !important;
+    }
+    #jssor_2{
+        visibility: hidden !important;
+    }
+    #sliderNew{
+        visibility: hidden;
+        position: relative;
+        top: 120px;
+        padding-bottom: 45px;
+    }
+    #sliderNew480{
+        visibility: hidden;
+        position: relative;
+        top: 1200px;
+        height: 30px;
+        padding-bottom: 200px;
+    }
+
+    #jssor_3
+    {
+        position:relative;
+        top:0px;
+        left:0px;
+        width:680px !important;
+        height:300px !important;
+    }
+
+    div[data-u='slides12git']{
+        cursor:default;
+        position: relative; 
+        top:100px;
+        left:0px;
+        width:680px !important;
+        height:300px !important;
+    }
+
+    .fitimagen{
+        position: relative;
+        width: 600px;
+        height: 235px;
+    }
+
+    #sliderNew768{
+        position: absolute;
+        top: 65px;
+    }
+	
+
+	
+}
+
+@media only screen and (max-width: 480px) {
+    /* Pricing Table*/
+    .single-price,
+    .single-table {
+        margin-bottom: 35px;
+    }
+    .single-price .plan-price {
+        height: 110px;
+        padding-top: 7px;
+    }
+    .single-price .plan-price:after {
+        border-width: 110px;
+        margin-left: -110px;
+    }
+    .single-table:before {
+        border-width: 0 145px 60px;
+    }
+    .single-table .btn-signup:after {
+        border-width: 78px 145px 0;
+    }
+    /* Coming soon */
+    #countdown li.angle-one {
+        left: 25px;
+    }
+    #countdown li.angle-two {
+        left: 10px;
+    }
+    #countdown li.angle-three {
+        right: 10px;
+    }
+    #countdown li.angle-four {
+        right: 25px;
+    }
+    #countdown li>span {
+        font-size: 14px;
+        line-height: 14px;
+        margin-top: 10px;
+    }
+    #countdown li.angle-two>span,
+    #countdown li.angle-four>span {
+        margin-top: 30px;
+    }
+    #subscribe {
+        font-size: 14px;
+        text-align: center;
+    }
+    #newsletter .form-control {
+        font-size: 14px;
+        height: 40px
+    }
+    #newsletter i {
+        font-size: 25px;
+    }
+    #countdown li.angle-one span.minutes,
+    #countdown li.angle-one .minute {
+        margin-left: 0
+    }
+	
+	#home-slider .main-slider {
+        height: 400px;
+	}
+    /* Contact-us2 CSS*/
+    #map-section .contact-info {
+        width: 100%;
+        position: static;
+    }
+    #gmap {
+        height: 390px;
+    }
+    #contact-form .btn-submit {
+        width: 60%;
+    }
+    /* 404 error CSS*/
+    #error-page {
+        padding: 50px 25px;
+    }
+    #error-page h2 {
+        font-size: 24px;
+    }
+    .btn-error {
+        font-size: 10px;
+        padding: 12px 11px;
+    }
+	#slider figure{
+		position: relative;
+		width: 0%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	
+	#slider {
+		position: relative;
+		width: 0%;
+		margin: -23px;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#slider2 figure{
+		position: relative;
+		width: 500%;
+		margin: 0;
+		left: 0;
+		animation: 20s slider infinite;
+			
+	}
+	#logohead {
+		width: 0%;
+			
+	}
+	#logohead2 {
+        
+		width: 50%;
+	}
+	#marquesina{
+		width: 66%;
+	}
+	.p{
+		font-size: 12px;
+	}
+	
+	#clavedigital{
+		position: absolute;
+		top: 332px;
+		left: -1103px;
+	}
+	#clavedigital2{
+		position: absolute;
+		top: 448px;
+		left: 14%;
+	}
+	#home-slider {
+        margin: 0px 0px;
+		padding-top: 142px
+    }    
+    #bulletSlider
+    {
+        visibility: hidden;
+    }
+    #sliderNew768{
+        visibility: hidden;
+    }
+    #jssor_3
+    {
+        visibility: hidden !important;
+        width: 0px !important;
+        height: 0px !important;
+        
+    }
+    #sliderNew{
+        visibility: hidden;
+        position: relative;
+        top: 114px;
+        padding-bottom: 325px;
+    }
+    #jssor_1
+    {
+        visibility: hidden !important;
+    }
+
+    #jssor_2
+    {
+        visibility: visible !important;
+        position:relative;
+        top:0px;
+        left:0px;
+        width:480px !important;
+        height:360px;
+    }
+
+    div[data-u='slides12git']{
+        cursor:default;
+        position: absolute; 
+        top:100px;
+        left:0px;
+        width:480px !important;
+        height:360px;
+    }
+    #sliderNew480{
+        position: absolute;
+        top: 49px;
+    }
+
+    .fitimagen{
+        position: relative;
+        width: 480px !important;
+        height: 300px;
+    }
+
+    
+
+}
+
+@media only screen and (max-width: 414px){
+
+
+    #jssor_3
+    {
+        visibility: none !important;
+    }
+    #clavedigital2{
+		position: absolute;
+		top: 435px;
+		left: 14%;
+    }
+    
+    #sliderNew{
+        visibility: none;
+        position: relative;
+        top: 114px;
+        padding-bottom: 320px;
+    }
+
+    #jssor_3
+    {
+        visibility: none !important;
+    }
+   
+    #jssor_2
+    {
+        position:relative;
+        top:0px;
+        left:0px;
+        width:400px !important;
+        height:360px !important;
+    }
+
+    div[data-u='slides12git']{
+        cursor:default;
+        position: relative; 
+        top:100px;
+        left:0px;
+        width:414px !important;
+        height:360px !important;
+    }
+
+    .fitimagen{
+        position: relative;
+        width: 414px !important;
+        height: 287px;
+    }
+
+    #sliderNew480{
+        position: absolute;
+        top: 40px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 380px){
+    #sliderNew{
+        visibility: none;
+        position: relative;
+        top: 114px;
+        padding-bottom: 303px;
+    }
+	#clavedigital2{
+		position: absolute;
+		top: 395px;
+		left: 14%;
+}
+	#home-slider {
+        margin: 0px 0px;
+		padding-top: 119px
+    }
+
+    #jssor_3
+    {
+        visibility: none !important;
+    }
+    #jssor_2
+    {
+        position:relative;
+        top:0px;
+        left:0px;
+        width:380px !important;
+        height:360px !important;
+    }
+
+    div[data-u='slides12git']{
+        cursor:default;
+        position: relative; 
+        top:100px;
+        left:0px;
+        width:380px !important;
+        height:360px !important;
+    }
+
+    .fitimagen{
+        position: relative;
+        width: 380px;
+        height: 265px;
+    }
+
+    #sliderNew480{
+        position: absolute;
+        top: 35px;
+    } 
+
+	
+    }
+    
+    @media only screen and (max-width: 370px){
+        #sliderNew{
+            visibility: none;
+            position: relative;
+            top: 114px;
+            padding-bottom: 335px;
+        }
+        #clavedigital2{
+            position: absolute;
+            top: 425px;
+            left: 13%;
+    }
+        #home-slider {
+            margin: 0px 0px;
+            padding-top: 119px
+        }
+
+    #jssor_3
+    {
+        visibility: none !important;
+    }
+        #jssor_2
+        {
+            position:relative;
+            top:0px;
+            left:0px;
+            width:370px !important;
+            height:360px !important;
+        }
+    
+        div[data-u='slides12git']{
+            cursor:default;
+            position: relative; 
+            top:100px;
+            left:0px;
+            width:370px !important;
+            height:258px !important;
+        }
+    
+        .fitimagen{
+            position: relative;
+            width: 370px !important;
+            height: 258px;
+        }
+    
+        #sliderNew480{
+            position: absolute;
+            top: 70px;
+        }
+
+    }
+
+    @media only screen and (max-width: 360px){
+        #sliderNew{
+            visibility: none;
+            position: relative;
+            top: 114px;
+            padding-bottom: 327px;
+        }
+        #clavedigital2{
+            position: absolute;
+            top: 415px;
+            left: 13%;
+    }
+        #home-slider {
+            margin: 0px 0px;
+            padding-top: 119px
+        }
+
+    #jssor_3
+    {
+        visibility: none !important;
+    }
+        #jssor_2
+        {
+            position:relative;
+            top:0px;
+            left:0px;
+            width:360px !important;
+            height:251px !important;
+        }
+    
+        div[data-u='slides12git']{
+            cursor:default;
+            position: relative; 
+            top:100px;
+            left:0px;
+            width:360px !important;
+            height:251px !important;
+        }
+    
+        .fitimagen{
+            position: relative;
+            width: 360px !important;
+            height: 251px;
+        }
+    
+        #sliderNew480{
+            position: absolute;
+            top: 69px;
+        }
+
+    }
+@media only screen and (max-width: 322px) {
+    
+	#sliderNew{
+        visibility: none;
+        position: relative;
+        top: 114px;
+        padding-bottom: 313px;
+    }
+    #clavedigital2{
+        position: absolute;
+        top: 390px;
+        left: 12%;
+}
+    #home-slider {
+        margin: 0px 0px;
+        padding-top: 120px
+    }
+    #jssor_2
+    {
+        position:relative;
+        top:0px;
+        left:0px;
+        width:322px !important;
+        height:322px !important;
+    }
+
+    div[data-u='slides12git']{
+        cursor:default;
+        position: relative; 
+        top:100px;
+        left:0px;
+        width:322px !important;
+        height:322px !important;
+    }
+
+    .fitimagen{
+        position: relative;
+        width: 322px !important;
+        height: 227px;
+    }
+
+    #sliderNew480{
+        position: absolute;
+        top: 69px;
+    }
+
+    #jssor_3
+    {
+        visibility: none !important;
+    }
+
+	
+}
+}

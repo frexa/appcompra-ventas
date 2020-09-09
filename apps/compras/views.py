@@ -100,7 +100,7 @@ class ActualizarLineaCompra(UpdateView):
 	success_url = 'compra'
 
 	def get_context_data(self, **kwargs):
-		context = super(ActualiarLineaCompra,self).get_context_data(**kwargs)
+		context = super(ActualizarLineaCompra,self).get_context_data(**kwargs)
 		if 'form' not in context:
 			context['form'] = self.form_class(self.request.GET)
 		return context

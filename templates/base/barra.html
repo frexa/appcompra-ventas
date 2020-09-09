@@ -1,28 +1,27 @@
 {%load static%}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
 	<div class="container-fluid">
-	<a class="navbar-brand" href="#"><img src="{%static 'imagenes/icono.jpg'%}"></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-level="Toggle navigation"><span class="navbar-toggler-icon"></span>
-	</button>
+	 <a class="navbar-brand" href="#">
+	 	<img src="{%static 'imagenes/icono.jpg'%}">
+	 </a>
+	
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-level="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+</button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-	<ul class="navbar-nav mr-auto">
+<div class="collapse navbar-collapse img-responsive" id="navbarSupportedContent">
+	<!---Lista de enlaces de la barra de navegacion--->
+	<ul class="navbar-nav nav-der mr-auto">
+
 		<li class="nav-item active">
 			<a class="nav-link" href="index">Principal<span class="sr-only">(current)</span></a>
 		</li>
 		
 		<li class="nav-item"><a class="nav-link" href="#">Entrar</a></li>
-		
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Compras</a>
-<!---lista de link para la opcion de compras--->
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="{%url 'registrar-compra'%}">Registrar</a>
-				<a class="dropdown-item" href="">Consultar</a>
-			</div>
-		</li>
-		
-		<li class="nav-item"><a class="nav-link " href="#">Recetarios</a></li>
+		<!---Menu de compras--->
+		{%include "nav_compra.html"%}
+		<!---Menu de recetas--->		
+		{%include "nav_recetas.html"%}
 		
 		<li class="nav-item"><a class="nav-link " href="#">Ventas</a></li>
 	
